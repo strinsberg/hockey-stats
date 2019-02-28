@@ -1,0 +1,5 @@
+#! /bin/bash
+# when the awk script is done then move its contents to here so this can 
+# function without the other script in its file
+
+awk -f stats.awk $* full.csv

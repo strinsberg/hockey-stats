@@ -1,0 +1,65 @@
+------------------------------------------------------------------------------
+-- config file for hockey stats.awk program
+--
+-- #stats FS = " ", #fpts FS = "="
+-- 1 = true, 0 = false
+-- #stats show == 1 means that default columns should be displayed instead of
+-- -- just the stats that are specified when filtering records.
+-- #stats sort decides what stat column to sort results by. It will still matter if
+-- -- that column is not displayed.
+-- #stats columns are the default columns to be displayed. player and year will
+-- -- are always displayed so they need not be added (or they will be displayed
+-- -- more than once).
+-- #fpts has each countable stat with its value. Change the number to adjust
+-- -- scoring for fan points. Add or delete rows to change what stats are counted
+-- -- when calculating fan points. Do not put empty lines between added or
+-- -- removed categories.
+-- Stats that are used as conditions and in this file must have proper 
+-- -- identifiers. These are listed below for what they stand for. All others
+-- -- will be ignored. "statname" -> description
+-- "player"
+-- "age"
+-- "pos" -> position
+-- "tm" -> team
+-- "gp" -> games played
+-- "g" -> goals
+-- "a" -> assists
+-- "pts" -> points
+-- "p/gp" -> points per game
+-- "dif" -> +/- (goal differntial)
+-- "pim" -> penaty minutes
+-- "evg" -> even strength goals
+-- "ppg" -> power play goals
+-- "shg" -> short handed goals
+-- "gwg" -> game winning goals
+-- "eva" -> even strength assists
+-- "ppa" -> power play assists
+-- "sha" -> short handed goals
+-- "ppp" -> power play points (ppg + ppa)
+-- "s" -> shots
+-- "spr" -> shooting percentage
+-- "toi" -> total time on ice (season)
+-- "avt" -> average ice time per game
+-- "blk" -> blocks
+-- "hit" -> hits
+-- "fow" -> face offs won
+-- "fol" -> face offs lost
+-- "fpr" -> face off percentage
+-- "year"
+-- "fpt" -> fan points
+-- "f/g" -> fan ponts per game
+------------------------------------------------------------------------------
+
+#stats
+show 1
+sort player
+columns pos gp g a pts dif ppp s blk
+
+#fpts
+g=3
+a=2
+dif=1
+pim=0.4
+ppp=1
+s=0.4
+blk=0.4
