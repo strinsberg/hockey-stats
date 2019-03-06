@@ -322,7 +322,7 @@ function calc_fpts(   _total) {
 
 
 
-# Shell sort using compare function below. Sorts in non-decreasing order
+# Shell sort using compare function below. Sorts in non-increasing order
 function sort_records(list, len, col_num,   h, i, j, check) {
   h = 1
   while (h < len) {
