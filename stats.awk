@@ -195,6 +195,9 @@ function parse_args(   i) {
     }
   }
   if ( LEN_COND == 0 ) {
+    print ""
+    print "!!! Error: No valid records entered. !!!"
+    print "Exiting... "
     status = -1
     exit
   }
