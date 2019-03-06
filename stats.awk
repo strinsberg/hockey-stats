@@ -1,12 +1,8 @@
 # stats.awk print the records of all players with >= stats for each provided
 # category=value.
-# uses full.csv
-#
-# TODO
-# - could do line sep by year or some sort specific thing instead of rows
-# - could adjust year to work with range or just one year
+# Requires full.csv
 
-  ### Global arrays
+  ### Global array information
   # stats -> array of stat info, wheather to show default conditions in addition
   #     to the ones specified, and what column to sort by if desired.
   # fan_points -> array assigning point values to stats
@@ -319,8 +315,7 @@ function calc_fpts(   _total) {
 
 
 
-# Shell sort -> can be copied elsewhere, but redeclare a compare function or
-# remove it and replace it with a condition.
+# Shell sort using compare function below. Sorts in non-decreasing order
 function sort_records(list, len, col_num,   h, i, j, check) {
   h = 1
   while (h < len) {
