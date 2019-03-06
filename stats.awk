@@ -82,13 +82,13 @@ BEGIN {
 ######## Main ################################################################
 
 # If a record satisfies the stat conditions add it to the records array
-( has_stats() ) { 
+( has_stats() ) {
 
   # Calculate additional column values
   # fan points total
   fan = calc_fpts()
   # fan points per game rounded to 2 decimal places
-  fan_gp = int( (fan / $columns["gp"]) * 100 ) / 100 
+  fan_gp = int( (fan / $columns["gp"]) * 100 ) / 100
   
   # Add columns for fan points and fan points per game
   NF += 2
@@ -191,8 +191,12 @@ function parse_args(   i) {
         conditions[args[1]] = args[2]
         ++LEN_COND
       } else
-        print "!!! Ignored \"" arg[1] "\" it is not a valid stat !!!"
+        printf("!!! Ignored \"%s\" it is not a valid stat !!!\n", args[1])
     }
+  }
+  if ( LEN_COND == 0 ) {
+    status = -1
+    exit
   }
 }
 
@@ -290,7 +294,7 @@ function print_record(record, list,   _len, i) {
 
 
 ### Print a list of players that satisfied the condition more than once
-function print_multiples() {    
+function print_multiples() {
   print ""
   print "-- Players with multiple seasons --"
   for ( player in multiples ) {
