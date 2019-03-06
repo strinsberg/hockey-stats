@@ -44,6 +44,8 @@ Henrik Zetterberg      2007, 2008,
 
 All desired categories should be listed in quotes, as in the example.
 
+**Be Warned** if you enter extremely general or loose conditions a very large number of results will be printed.
+
 It may be necessary to run chmod to make stats executable. more info [here](https://www.linode.com/docs/tools-reference/tools/modify-file-permissions-with-chmod/) 
 
 # Categories
