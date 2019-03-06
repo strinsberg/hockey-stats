@@ -1,5 +1,6 @@
 #! /bin/bash
-# when the awk script is done then move its contents to here so this can 
-# function without the other script in its file
+# Run this script to invoke the stats awk script
+# eg) $> ./stats "g=30" "a=20"
+#     Will print all players since 2007 that had goals >= 40 and assist >= 30
 
 awk -f stats.awk $* full.csv
