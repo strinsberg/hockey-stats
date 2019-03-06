@@ -6,6 +6,11 @@ I wrote this to help a little with my fantasy hockey. It allows me to find which
 I also wanted to learn a little awk and this seemed like a task that it is well suited for.
 Though probably not most peoples first choice for working with statistical data :)
 
+# Use
+Download  stats, stats.awk, full.csv, config
+
+Run on the command line with $> ./stats \[args]
+
 Example:
 ```
 $> ./stats "g=30" "a=40" "hits=50"
@@ -36,6 +41,10 @@ Alex Ovechkin          2008, 2009, 2010,
 Zach Parise            2008, 2009, 
 Henrik Zetterberg      2007, 2008,
 ```
+
+All desired categories should be listed in quotes, as in the example.
+
+It may be necessary to run chmod to make stats executable. more info [here](https://www.linode.com/docs/tools-reference/tools/modify-file-permissions-with-chmod/) 
 
 # Categories
 all conditions are entered with an = sign for simplicity. This will return all records that have a value >= the value given.
