@@ -76,11 +76,12 @@ There is also a configuration file to allow default display behaviour and fan po
 More information is available in config file.
 
 **\#stats** -> Default categories to show when printing results.
-- show == 1  - Print specified categories. (default)
-- show == 0  - Only print the categories specified when running the script.
+- show 1  - Print specified categories. (default)
+- show 0  - Only print the categories specified when running the script.
 - sort player  - The category to sort by. Only uses the first argument. (default player)
 - columns pos gp g a pts dif ppp s blk  - The categories to print. (default pos gp g a pts dif ppp s blk)
-The values must be seperated by a space. The desired categories should all be on the same line.
+
+All arguments should be seperated by a space and listed on the same line.
 
 **\#fpts** -> Values used for fpts and f/g calculations.
 Defaults:
@@ -91,4 +92,5 @@ Defaults:
 - ppp=1
 - s=0.4
 - blk=0.4
-They must be seperated with only an '=' and listed on its own line.
+
+The category and value must be seperated with only an '=' and listed on their own line.
